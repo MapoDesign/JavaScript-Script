@@ -1,0 +1,24 @@
+body {font-family: 'Inter', sans-serif;}
+
+p {
+    display: block;
+    margin:0;
+    font-size: 12px;
+}
+
+#importo{position: absolute; width: 100px; top: 445px; left: '+21*5*i+'px; padding-left:20px; font-size:12px; color:#fff;}
+
+#andamento{
+	display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.skills{
+	padding-top: 20px;
+    width: 100px;
+    background-color: #a4c8ec;
+    display: block;
+    margin-right: 1px;
+
+}

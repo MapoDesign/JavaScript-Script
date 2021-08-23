@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Document</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/code.js"></script>
+	
+</head>
+<body>
+	<div id="andamento" class="container"></div>
+	
+	
+<script type="text/javascript">
+	var mese = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+
+	// Dati JSON
+
+	var json = '{"mesi":['+'{"documenti":35,"importo":45131},'+'{"documenti":50,"importo":14295},'+'{"documenti":34,"importo":37705},'+'{"documenti":7,"importo":27198},'+'{"documenti":1,"importo":30912},'+'{"documenti":34,"importo":4805},'+'{"documenti":39,"importo":43334},'+'{"documenti":44,"importo":19650},'+'{"documenti":34,"importo":5494},'+'{"documenti":32,"importo":3958},'+'{"documenti":45,"importo":37508},'+'{"documenti":48,"importo":5844}]}';
+	
+	var obj = JSON.parse(json);
+
+	i = 0;
+
+	var text = "";
+
+	var heightBar = 1;
+
+	// Grafico a barre
+
+	
+	// loop per inserimento dei dati
+	while (mese[i]){
+		//Calcola la larghezza
+		heightBar = parseInt(heightBar) * parseInt(obj.mesi[i].importo) / 100
+
+		//Inserisci i dati
+		text += '<div><div>' + mese[i] + '</div><div class="skills html" style="height: ' + heightBar + 'px"><p>'+ obj.mesi[i].documenti +' doc.</br></p><p>'+ obj.mesi[i].importo +' &euro;</p></div></div></div>';
+
+		heightBar = 1;
+		i++;
+	};
+
+	
+	document.getElementById("andamento").innerHTML = text;
+
+	document.getElementById("andamento").innerHTML = text;
+
+	
+
+</script>
+</body>
+</html>
