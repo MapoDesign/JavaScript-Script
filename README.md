@@ -5,5 +5,5 @@ Hi! Nice to find you in my repository!
 
 You can find:
 
-* A scroll bar - demo on the top of this page: http://mapodesign.com/index.html
-* A todolist (SheTech Coding Camp) - demo: http://mapodesign.com/portfolio/test/todolist/
+* A scroll bar #JAVASCRIPT - demo on the top of this page: http://mapodesign.com/index.html 
+* A todolist (SheTech Coding Camp) #JAVASCRIPT - demo: http://mapodesign.com/portfolio/test/todolist/
