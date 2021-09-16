@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Average Speed (km/h and m/s)</title>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <h1>Average Speed (km/h and m/s)</h1>
+        <p>
+            Enter the time taken:
+            <input id="min" value="0" />'
+            <input id="sec" value="10" />"
+        </p>
+        <p>
+            Enter the meters or kilometers traveled
+            <input id="metri" value="100" /> meters
+        </p>
+        <p>
+            <input type="button" value="Calculate the average speed" onclick="averageSpeed()" />
+        </p>
+        <p>
+            Your average speed is <span id="vms">...</span> m/s (meters/seconds), <br />
+            it is matches to <span id="vkmh">...</span> km/h (chilometer/hours)
+        </p>
+    </body>
+</html>

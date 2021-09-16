@@ -1,0 +1,18 @@
+span#anni, span#capitaleFinale {
+    font-weight: bold;
+}
+
+p {
+    font-size: 110%;
+}
+
+input {
+    text-align: center;
+    width: 5pc;
+    font-size: 100%;
+}
+
+.btn {
+    width: auto;
+    font-size: 150%;
+}

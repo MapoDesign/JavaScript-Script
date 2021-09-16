@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Calcolo dell'interesse</title>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <h1>Calcolo dell'interesse</h1>
+        <p>
+            Inserisci il valore del capitale iniziale:<input id="capitale" value="1000" /> €
+        </p>
+        <p>
+            Inserisci il numero di anni:<input id="anni" value="5"> anni
+        </p>
+        <p>
+            Inserisci il tasso:<input id="tasso" value="3"> %
+        </p>
+        <p>
+            <input class="btn" type="button" value="Calcola l'interesse" onclick="calcolaInteresse()" />
+        </p>
+        <p>
+            Il tuo capitale dopo <span id="anni">...</span> anni è di <span id="capitaleFinale">...</span> €
+        </p>
+        
+    </body>
+</html>
