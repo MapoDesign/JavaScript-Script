@@ -11,7 +11,29 @@
     </style>
 </head>
 <body>
+    <h2>Ricerca Libro</h2>
+    <p>Benvenuto, inserisci l'autore da cercare</p>
+    <input type="text" placeholder="Nome autore" id="search" name="search" style="width: 200px;"/>
+    <input type="button" value="Ricerca" onclick="search()">
+    <div id="searchResult"></div>
+    <hr>
     <div id="libreria"></div>
     <script src="js/main.js"></script>
+    <h2>Inserimento libro</h2>
+    <p>Inserisci le informazioni del nuovo libro</p>
+    <form >
+        <label>Titolo libro:</label><input type="text" id="nome" placeholder="Titolo libro" required>
+        <label>Nome autore:</label><input type="text" id="autore" placeholder="Autore" required></br>
+        <label>Data pubblicazione</label><input type="date" placeholder="data" id="dataDiPubblicazione" required>
+        <label>Pagine totali</label><input type="number" placeholder="Pagine totali" id="pagine" required>
+        <input type="button" value="Aggiungi libro" onclick="inserisciLibro();return false">
+    </form>
+    <hr>
+    <h2>Cancella libro</h2>
+    <p>Inserisci il libro da cancellare</p>
+    <form >
+        <label>Titolo libro:</label><input type="text" id="textNome" placeholder="Titolo libro" required>
+        <input type="button" value="Cancella" onclick="cancelBook();return false">
+    </form>
 </body>
 </html>
