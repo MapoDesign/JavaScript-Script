@@ -1,15 +1,7 @@
-function zerPad(number,width) {
-    let string = String(number);
-    while (string.length < width) {
-        string = "0" + string;
-    }    
-    return string;
+function printFarmInventory(vacche, polli, maiali, width) {
+    console.log(`${String(vacche).padStart(width,"0")} Vacche`);
+    console.log(`${String(polli).padStart(width,"0")} Polli`);
+    console.log(`${String(maiali).padStart(width,"0")} Maiali`);
 }
 
-function printFarmInventory(vacche, polli, maiali) {
-    console.log(`${zerPad(vacche, 3)} Vacche`);
-    console.log(`${zerPad(polli, 3)} Polli`);
-    console.log(`${zerPad(maiali, 3)} Maiali`);
-}
-
-printFarmInventory(7,16,3);
+printFarmInventory(57,316,23,6);
