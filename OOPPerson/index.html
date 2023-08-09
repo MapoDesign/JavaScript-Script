@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class Persona {
+      constructor(name, surname, age, gender, hobbies) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.gender = gender;
+        this.hobbies = hobbies;
+      }
+
+      saluta() {
+        console.log(`Ciao sono ${this.name}`);
+      }
+    }
+
+    class Insegnante extends Persona {
+        constructor(name, surname, age, gender, hobbies, materia){
+            super(name, surname, age, gender, hobbies);
+            this.materia = materia;
+        }
+        
+        get materia(){
+            return this._materia
+        }
+
+        set materia(nuovaMateria){
+            this._materia = nuovaMateria;
+        }
+
+        riprendiAlunno(nomeAlunno){
+            console.log(`${nomeAlunno}! Non si mangia in classe!`);
+        }
+    }
+
+    const insegnante = new Insegnante('Anna', 'Blu', 32, 'F', ['Netflix'], 'Storia');
+    insegnante.riprendiAlunno('Edoardo');
+
+    const persona1 = new Persona("Luca", "Rossi", 23, "M", [
+      "calcio",
+      "basket",
+    ]);
+    console.log(persona1);
+    persona1.saluta();
+  </script>
+</html>
