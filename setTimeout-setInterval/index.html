@@ -17,9 +17,10 @@
         alert('ciao sono in timeout');
     }
 
-    // Blocca l'allert cliccando sul bottone
+    // Blocca l'allert e l'ora cliccando sul bottone
     btn.addEventListener('click', ()=>{
-        clearTimeout(saluti);
+        clearTimeout(saluti); // blocca l'allert
+        clearTimeout(createClock); // blocca l'ora
     })
 
     // Crea un orologio digitale
