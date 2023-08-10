@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time</title>
+</head>
+<body>
+    <button>Vai</button>
+    <p id="demo"></p>
+</body>
+<script>
+    // Crea un allert entro 5 secondi
+    let saluti = setTimeout(saluta,5000);
+    const btn = document.querySelector('button');
+    function saluta() {
+        alert('ciao sono in timeout');
+    }
+
+    // Blocca l'allert cliccando sul bottone
+    btn.addEventListener('click', ()=>{
+        clearTimeout(saluti);
+    })
+
+    // Crea un orologio digitale
+    function displayTime() {
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        document.getElementById('demo').textContent = time;
+
+        
+    }
+
+    const createClock = setInterval(displayTime,1000);
+
+</script>
+</html>
