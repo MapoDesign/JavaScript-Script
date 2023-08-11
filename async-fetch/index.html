@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async</title>
+  </head>
+  <body></body>
+  <script>
+    // Ritorna i dati
+    fetch("todo.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        todos = json;
+        console.log("Dati: ", todos);
+      })
+      .catch((err) => {
+        console.log("Fetch error: " + err.message);
+      });
+
+      // PROMISE CUSTOM - Crea un alert dopo 2 secondi se il messaggio e l'intervallo è corretto
+      function timeoutPromise(message, interval){
+        return new Promise((resolve,reject) => {
+        if (message === '' || typeof message !== 'string') {
+            reject('Il messaggio è vuoto o non è una frase')
+        } else if(interval < 0 || typeof interval !== 'number' ) {
+            reject("L'intervallo scelto è negativo o non è un numero")
+        } else {
+            setTimeout(()=>{
+            resolve(message);
+        },2000);
+        }
+        
+      })
+      } 
+
+      timeoutPromise('Benvenuto', 2000)
+        .then(message => {
+            alert(message);
+        })
+        .catch(error => {console.log('Errore: ' + error);});
+
+
+    // Inserisce un'immagine all'interno del body
+    fetch("https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        .then(response => {
+            return response.blob();
+        })
+        .then(myBlob => {
+            let objectURL = URL.createObjectURL(myBlob);
+            let image = document.createElement('img');
+            image.src = objectURL;
+            document.body.appendChild(image);
+        })
+        .catch(err => {
+            console.log("C'è un problema con la tua fatch: " + err.message);
+        })
+  </script>
+</html>
