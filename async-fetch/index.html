@@ -57,5 +57,23 @@
         .catch(err => {
             console.log("C'è un problema con la tua fatch: " + err.message);
         })
+
+        // Immagine con async await + try/catch
+    async function  myFetch(){
+      try{
+        let response = await fetch('https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      let myBlob = await response.blob();
+
+      let objectURL = URL.createObjectURL(myBlob);
+      let image = document.createElement('img');
+      image.src = objectURL;
+      document.body.appendChild(image);
+      } catch (error) {
+        console.log("C'è un problema con la tua fatch: " + error.message);
+      }
+      
+    }
+
+    myFetch();
   </script>
 </html>
