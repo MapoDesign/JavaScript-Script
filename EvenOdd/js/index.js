@@ -1,13 +1,10 @@
 function evenOrOdd(){
     var n = $('#n').val();
+if(!isNaN(n)){
+ risultato = n % 2 == 0 ? "even" : "odd";
+}else{
+    risultato = "not a number";
+}
 
-    if (isNaN(n)) {
-        risultato = " is not a number";
-    } else if (n % 2 == 0) {
-        risultato = " is even";
-    } else {
-        risultato = " is odd";
-    }
-
-    $('span#risultato').html( n + risultato);
+    $('span#risultato').html(  `${n} is ${risultato}`);
 }
