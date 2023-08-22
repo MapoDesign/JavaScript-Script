@@ -1,4 +1,4 @@
-var listItems = ['Fare meditazione', 'Colazione', 'Passeggiata'];
+var listItems = ['Lavare i piatti', 'Pulire sabbietta', 'MATTINA: Dar da mangiare ai gatti','SERA: Dar da mangiare ai gatti','Lavatrice','Piegare i panni','Bagnare piante','Bagnare prato'];
 var listElement = document.querySelector('#task-list');
 
 //trasformo la mia lista in una stringa (testo)

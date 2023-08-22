@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="stampDate.js"></script>
+  </head>
+  <body>
+    <div id="timeSector"></div>
+  </body>
+  <script>
+    const time = document.createElement("p");
+    let todayString = stampDate();
+    const text = document.createTextNode(todayString);
+    time.appendChild(text);
+    document.querySelector("#timeSector").appendChild(time);
+  </script>
+</html>
